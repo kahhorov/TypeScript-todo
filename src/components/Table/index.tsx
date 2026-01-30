@@ -88,11 +88,13 @@ export function TableFn() {
                   </DropdownMenuContent>
                 </DropdownMenu>
               </TableCell>
-              {t.isDone && (
-                <Badge className="inline-flex items-center rounded-4xl bg-yellow-400/20 px-3 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20 absolute right-10 top-2.5">
-                  Done
-                </Badge>
-              )}
+              <TableCell className="relative">
+                {t.isDone && (
+                  <Badge className="inline-flex items-center rounded-4xl bg-yellow-400/20 px-3 py-1 text-xs font-medium text-yellow-500 inset-ring inset-ring-yellow-400/20 absolute right-2 top-1">
+                    Done
+                  </Badge>
+                )}
+              </TableCell>
             </TableRow>
           );
         })}
